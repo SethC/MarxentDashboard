@@ -7,7 +7,7 @@
 		<title>Marxent Dashboard</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -20,14 +20,24 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<script>
+			var h = screen.height;
+			var w = screen.width;
+		</script>
+		<style>
+			.slides {margin:0; padding:0; border:0; bottom:0 !important; top:0 !important; left: 0 !important; transform:inherit !important; }
+			.present {margin:0; padding:0; border:0; bottom:0 !important; top:0 !important;}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZDFmOTUyMzUtOThmNS00MmJlLWJjYmQtNWM0YmNlNDllNWM0IiwidCI6IjZlOTM0NDQ0LTUwY2EtNDhmNC1iYzQ3LTllNmMxNDI4ODVhZCIsImMiOjN9" frameborder="0" allowFullScreen="true"></iframe>
+					<iframe onload="this.width=w; this.height=h;" src="https://app.powerbi.com/view?r=eyJrIjoiZDFmOTUyMzUtOThmNS00MmJlLWJjYmQtNWM0YmNlNDllNWM0IiwidCI6IjZlOTM0NDQ0LTUwY2EtNDhmNC1iYzQ3LTllNmMxNDI4ODVhZCIsImMiOjN9" frameborder="0" allowFullScreen="true"></iframe>
 				</section>
-				<section>Slide 2</section>
+				<section>
+					<iframe onload="this.width=w; this.height=h;" src="https://app.powerbi.com/view?r=eyJrIjoiYTVjNDdkN2ItNTc3MS00MjU0LTkxNGUtZTgzZGVmODdiOWUzIiwidCI6IjZlOTM0NDQ0LTUwY2EtNDhmNC1iYzQ3LTllNmMxNDI4ODVhZCIsImMiOjN9"  frameborder="0" allowFullScreen="true"></iframe>
+				</section>
 			</div>
 		</div>
 
@@ -51,7 +61,9 @@
 		<script>
 			Reveal.configure({
 				autoSlide: 15000,
-				loop: true
+				loop: true,
+				width: w,
+				height: h
 			});
 		</script>
 	</body>

@@ -187,7 +187,7 @@
 		state = [],
 
 		// The current scale of the presentation (see width/height config)
-		scale = 1,
+		scale = 1.4,
 
 		// CSS transform that is currently applied to the slides container,
 		// split into two groups
